@@ -5,35 +5,38 @@
             Aula 11
         </title>
         <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="codcss.css"/>
         <script src="js/functions.js"></script>
     </head>
     <body>
-        <h2>Padrão REST</h2>
-        <a href="javascript:callFetchWithGet()">Get</a>
-        <a href="javascript:callFetchWithPost('Rafaela Yoko')">Post</a>
-        <a href="javascript:callFetchWithPut(3,'Guilherme Pellegrini')">Put</a>
-        <a href="javascript:callFetchWithDelete(4)">Delete</a>
-        <p id="json"> </p>
+        <header>
+            <h1>BIBLIOTECA DE FILMES</h1>
+            <nav>
+                <a href="https://github.com/LucasCanovaS/TT905">Github Pages</a>
+            </nav>
 
-        <h2>Formulário Básico (post)</h2>
+        <h2> Adicione um Filme (Post)</h2>
         <form id="postForm">
-        <label for="mensagem">Mensagem:</label>
+        <label for="mensagem">Nome do Filme:</label>
         <input type="text" id ="mensagem" name="mensagem"/>
-        <button type="submit" onclick="return submitPost()">Submit</button>
+        <button type="submit" onclick="return submitPost()">Incluir</button>
         </form>
 
-        <h2>Formulário Básico (Put)</h2>
+        <h2> Substitua um Filme (Put)</h2>
         <form id="putForm">
-        <label>Id:<input type="text" name="id"/></label>
-        <label>Mensagem:<input type="text" name="mensagem"/></label>
+        <label>Posição:<input type="text" name="id"/></label>
+        <label>Título:<input type="text" name="mensagem"/></label>
          <button type="submit" onclick="return submitPut()">Submit</button>
          </form>
 
-         <h2>Formulário Básico (Delete)</h2>
+         <h2> Exclua um Filme (Delete)</h2>
          <form id="deleteForm">
-         <label>Id:<input type="text" name="id"/></label>        
-          <button type="submit" onclick="return submitDelete()">Submit</button>
+         <label>Posição do Filme:<input type="text" name="id"/></label>        
+          <button type="submit" onclick="return submitDelete()">Deletar</button>
           </form>
-    
+          <div class="frame" id="frame"></div>
+          <a href="javascript:callFetchWithGet()">Ver Lista de Filmes</a>
+          <p id="json"> </p>
+        </header>
     </body>
 </html>
